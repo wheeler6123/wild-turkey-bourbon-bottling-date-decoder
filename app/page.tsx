@@ -1,13 +1,26 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputForm from "./ui/InputForm";
 import ResultsDisplay from "./ui/ResultsDisplay";
 import { DateResultObject } from "./utils";
 import Footer from "./ui/Footer";
 
+declare global {
+  interface Window { 
+    _mtm: any; 
+  }
+}
+
 const Home: React.FC = () => {
   const [data, setData] = useState<DateResultObject & { code: string } | null>(null);
+
+  useEffect(() => {
+    var _mtm = window._mtm = window._mtm || [];
+    _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://matomo-g6ro.onrender.com/js/container_FzsTzUTB.js'; s.parentNode!.insertBefore(g,s);
+}, [])
 
   return (
     <main className="w-100% h-screen bg-center bg-[url('/turkey1.webp')] bg-cover">
