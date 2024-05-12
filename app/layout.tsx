@@ -5,6 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Wild Turkey Date Decoder",
   description: "Enter the laser code from your bottle of Wild Turkey bourbon or rye whiskey to find out when it was bottled. This tool works for Wild Turkey bourbon and rye whiskey bottles with legible laser codes.",
+  keywords: "wild turkey bourbon whiskey, wild turkey rye whiskey, wild turkey laser code, wild turkey bottling date, wild turkey date code",
 };
 
 export default function RootLayout({
